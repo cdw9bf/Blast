@@ -1,0 +1,75 @@
+##### Notes of the Control Structure ######
+
+
+datatypes.py 
+	|
+	|- Contains the data structures
+	    |-  line 
+	|- Should be a header for all the other files
+
+voxelize.py 
+	|
+	|- Finds center of voxel  () 
+	|
+	|- box()
+	|	- First makes bounding box around brep 
+	|	- Populates it with evenly spaced (according to shape of voxel) points to 
+	|	  test whether or not they are in the voxel 
+	|	- Copies the curves to the right starting and ending points 
+	|	- Removes duplicate curves assuming that all the curves are lines 
+	|	   (if they are non linear, then just the starting and ending point will not
+	|		 sufficient to check their uniqueness)
+	| 	# Notes: maybe break into smaller functions, such as finding center points of voxels 
+	|     copying the cubes, then testing duplicates?
+	
+
+main.py
+	|
+	|- Contains the contents for the grasshopper script
+	|- Should be copied right into the grasshopper for running everything else
+
+
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+##### Structure for the Scripts ##### 
+
+main.py 
+	|
+	|- Goals:
+	|	- Voxilize the form
+	|	- Lay infill structures
+	|		- Have ability to add different fills 
+	|	- Break up by layer, find the path
+	|		- Different paths will be needed
+	|		- Cross hatch, left hand, regular grid, etc. 
+	|	- Export Lines into grasshopper 
+	|
+	|
+	|- Notes:
+	|	- Break things into functions, different fill structures can be 
+	|	  different files, that way it will be simple to add and change things
+	
+	
+	
+Where I am Currently:
+
+sort list so that indexes match up
+if # < 4:
+	outside.append(edgePoint)
+while not loop:
+	
+	
+
+Next Steps:
+- path finding through the middle layers and different stragies
